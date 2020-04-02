@@ -1,6 +1,6 @@
 #game-view,
 .loading {
-  width: 700px;
+  width: 800px;
   margin: 0 auto;
 }
 
@@ -120,7 +120,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 500px;
+  height: 600px;
 }
 
 .board .hidden-word {

@@ -5,7 +5,7 @@ import pprint
 from PIL import Image
 from io import BytesIO
 
-subscription_key = "f9f11b0236e143c99a18be026050fe8b"
+subscription_key = "##################"
 search_url = "https://api.cognitive.microsoft.com/bing/v7.0/images/search"
 
 terms = ["animals", "people", "places", "things", "food", "random", "celebs" , "winter", "summer", "art", "vehicles", "technology", "funny", "creepy", "cartoons", "gaming", "silly"]

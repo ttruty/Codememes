@@ -8,11 +8,11 @@ def convert_list_to_string(mlist):
     converted_list = converted_list.replace('\'', '')
     return converted_list
 
-api_key = u'e4ce59d69dd819a22c65555b0acfdb3a'
-api_secret = u'e735449196b1b267'
+api_key = u'############################'
+api_secret = u'######################'
 
-FLICKR_PUBLIC = 'e4ce59d69dd819a22c65555b0acfdb3a'
-FLICKR_SECRET = 'e735449196b1b267'
+FLICKR_PUBLIC = '####################'
+FLICKR_SECRET = '######################'
 flickr = flickrapi.FlickrAPI(FLICKR_PUBLIC,FLICKR_SECRET,format='parsed-json')
 random.seed()
 rand_page = random.randrange(1,100000,1)

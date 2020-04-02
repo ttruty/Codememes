@@ -16,7 +16,7 @@ ratings = ["g", "pg", "pg-13", "r"]
 terms = ["animals", "people", "places", "things", "food", "boats", "cars", "cats", "dogs", "random", "celebs" , "plants", "meme", "winter", "summer", "funny", "creepy", "cartoons", "gaming", "happy", "silly"]
 # create an instance of the API class
 api_instance = giphy_client.DefaultApi()
-api_key = 'XtbAmaclmp3f1hk6WyOb8zo6fIETIB6s' # str | Giphy API Key.
+api_key = '######################' # str | Giphy API Key.
 q = 'random' # str | Search query term or prhase.
 limit = 100 # int | The maximum number of records to return. (optional) (default to 25)
 offset = 0 # int | An optional results offset. Defaults to 0. (optional) (default to 0)

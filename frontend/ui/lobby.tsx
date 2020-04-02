@@ -45,6 +45,9 @@ export const Lobby = ({ defaultGameID }) => {
             create a new game or join an existing game, enter a game identifier choose a rating,
             and click 'GO'. 
           </p>
+		  <p>
+		  <a href="https://timtruty.com/projects/gaming/2020-04-01-play-codememes/">Basic Tutorial How to Play and</a>
+		  </p>
           <input
             type="text"
             id="game-name"

@@ -3,10 +3,9 @@ const Unsplash = require('unsplash-js').default;
 const toJson =  require('unsplash-js').toJson;
 const fetch = require('node-fetch');
 global.fetch=fetch;
-//const unsplash = new Unsplash({ accessKey: "XXe2XzeIzsPKmTuh-nltG1dMyI7RjDkUeBkHSMG9X5k" });
 
 const unsplash = new Unsplash({
-  accessKey: "XXe2XzeIzsPKmTuh-nltG1dMyI7RjDkUeBkHSMG9X5k",
+  accessKey: "##########################",
   // Optionally you can also configure a custom header to be sent with every request
   headers: {
     "X-Custom-Header": "stuff"

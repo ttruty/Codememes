@@ -1,6 +1,6 @@
 import logging
 from pyunsplash import PyUnsplash
-api_key = 'XXe2XzeIzsPKmTuh-nltG1dMyI7RjDkUeBkHSMG9X5k'
+api_key = '#######################'
 
 # instantiate PyUnsplash object
 py_un = PyUnsplash(api_key=api_key)
