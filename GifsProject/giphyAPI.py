@@ -13,10 +13,13 @@ def convert_list_to_string(list):
     return converted_list
 
 ratings = ["g", "pg", "pg-13", "r"]
-terms = ["animals", "people", "places", "things", "food", "boats", "cars", "cats", "dogs", "random", "celebs" , "plants", "meme", "winter", "summer", "funny", "creepy", "cartoons", "gaming", "happy", "silly"]
+terms = ["animals", "people", "places", "things", "food", "cats", "dogs", "random", "celebs", "meme", "winter", "summer",
+         "fall", "funny", "creepy", "cartoons", "happy", "silly", "fun", "music", "random", "random", "random", "random",
+         "random", "random", "random", "random","random", "random", "random", "random","random", "random", "random", "random"
+         ]
 # create an instance of the API class
 api_instance = giphy_client.DefaultApi()
-api_key = '######################' # str | Giphy API Key.
+api_key = 'XtbAmaclmp3f1hk6WyOb8zo6fIETIB6s' # str | Giphy API Key.
 q = 'random' # str | Search query term or prhase.
 limit = 100 # int | The maximum number of records to return. (optional) (default to 25)
 offset = 0 # int | An optional results offset. Defaults to 0. (optional) (default to 0)
@@ -39,13 +42,13 @@ for rating in ratings:
             gif = api_response.data
             for g in gif:
                 if rating == "g":
-                    g_list.append(g.images.fixed_height_small.url)
+                    g_list.append(g.images.fixed_height.url)
                 elif rating == "pg":
-                    pg_list.append(g.images.fixed_height_small.url)
+                    pg_list.append(g.images.fixed_height.url)
                 elif rating == "pg-13":
-                    pg_13_list.append(g.images.fixed_height_small.url)
+                    pg_13_list.append(g.images.fixed_height.url)
                 elif rating == "r":
-                    r_list.append(g.images.fixed_height_small.url)
+                    r_list.append(g.images.fixed_height.url)
                 else:
                     print("error in rating code")
         except ApiException as e:

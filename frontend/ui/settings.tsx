@@ -1,17 +1,27 @@
 import * as React from 'react';
+import ToggleSet from '~/ui/toggle-set';
 
 const settingToggles = [
   {
     name: 'Full-screen',
     setting: 'fullscreen',
+    desc: 'Enlarge the board to take up the whole page.',
   },
   {
     name: 'Color-blind',
     setting: 'colorBlind',
+    desc:
+      'Add patterned borders to help color-blind players distinguish teams.',
   },
   {
     name: 'Dark',
     setting: 'darkMode',
+    desc: 'Darken the mood.',
+  },
+  {
+    name: 'Spymaster may guess',
+    setting: 'spymasterMayGuess',
+    desc: 'When enabled, clicking a word from spymaster view reveals the word.',
   },
 ];
 
@@ -43,7 +53,11 @@ export class SettingsButton extends React.Component {
 
   public render() {
     return (
-      <button onClick={e => this.handleClick(e)} className="gear">
+      <button
+        onClick={(e) => this.handleClick(e)}
+        className="gear"
+        aria-label="settings"
+      >
         <svg
           width="30"
           height="30"
@@ -68,7 +82,10 @@ export class SettingsPanel extends React.Component {
   public render() {
     return (
       <div className="settings">
-        <div onClick={e => this.props.toggleView(e)} className="close-settings">
+        <div
+          onClick={(e) => this.props.toggleView(e)}
+          className="close-settings"
+        >
           <svg
             width="32"
             height="32"
@@ -81,31 +98,21 @@ export class SettingsPanel extends React.Component {
               transform="translate(1 1)"
               stroke="black"
               strokeWidth="2"
+              role="button"
+              aria-label="close settings"
             />
           </svg>
         </div>
         <div className="settings-content">
           <h2>SETTINGS</h2>
           <div className="toggles">
-            {settingToggles.map(toggle => (
-              <div className="toggle-set" key={toggle.setting}>
-                <div className="settings-label">
-                  {toggle.name}{' '}
-                  <span className={'toggle-state'}>
-                    {this.props.values[toggle.setting] ? 'ON' : 'OFF'}
-                  </span>
-                </div>
-                <div
-                  onClick={e => this.props.toggle(e, toggle.setting)}
-                  className={
-                    this.props.values[toggle.setting]
-                      ? 'toggle active'
-                      : 'toggle inactive'
-                  }
-                >
-                  <div className="switch"></div>
-                </div>
-              </div>
+            {settingToggles.map((toggle) => (
+              <ToggleSet
+                key={toggle.name}
+                values={this.props.values}
+                toggle={toggle}
+                handleToggle={this.props.toggle}
+              />
             ))}
           </div>
         </div>
