@@ -39,7 +39,7 @@ jobs:
             docker rmi $(docker images -q)
             
             #build container
-            docker build -t ttruty/codememes-image:latest .
+            docker build -t ttruty/codememes-image:latest . --no-cache
             # run container
             docker run -d -p 3000:9091 ttruty/codememes-image
 
