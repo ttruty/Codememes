@@ -31,8 +31,18 @@ jobs:
             # Stop running container
             mkdir git clone https://github.com/ttruty/Codememes.git
             cd Codememes
+            
+            # stop all running containers
+            docker stop $(docker ps -aq) 
+            #remove all containers
+            docker rm $(docker ps -aq)
+            #remove all images
+            docker rmi $(docker images -q)
+            
+            #build container
             docker build -t codememes-image:latest .
-            docker run -d -p 5000:5000 ttruty/codememes
+            # run container
+            docker run -d -p 3000:9091 ttruty/codememes-image
 
           
           
