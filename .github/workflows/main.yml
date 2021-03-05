@@ -28,7 +28,8 @@ jobs:
           USERNAME: ${{ secrets.SSH_USERNAME }}
           KEY: ${{ secrets.SSH_KEY }}
           script: |
-            # Stop running container
+            # Remove repo dir if exists
+            rm -rf Codememes
             git clone https://github.com/ttruty/Codememes.git
             cd Codememes
             
