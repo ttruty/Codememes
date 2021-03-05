@@ -32,7 +32,7 @@ jobs:
             mkdir git clone https://github.com/ttruty/Codememes.git
             cd Codememes
             docker build -t codememes-image:latest .
-            docker run -d -p 3000:5000 ttruty/codememes
+            docker run -d -p 5000:5000 ttruty/codememes
 
           
           
