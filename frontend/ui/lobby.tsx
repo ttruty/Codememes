@@ -76,7 +76,7 @@ export const Lobby = ({ defaultGameID }) => {
       <div id="available-games">
         <form id="new-game">
           <p className="intro">
-            Play <b>Codememes</b> online across multiple devices on a shared
+            Play <b>Codememes!</b> online across multiple devices on a shared
             board with images and gifs. To create a new game or join an existing
             game, enter a game identifier choose a rating, and click 'GO'.
           </p>
