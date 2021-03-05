@@ -9,7 +9,7 @@ RUN apk add gcc musl-dev \
 FROM node:12-alpine as frontend
 COPY . /app
 WORKDIR /app/frontend
-RUN npm install -g parcel-bundler \
+RUN npm install -g parcel-bundler@1.12.3 \
     && npm install \
     && sh build.sh
 
