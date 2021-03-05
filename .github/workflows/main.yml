@@ -31,15 +31,12 @@ jobs:
             git clone https://github.com/ttruty/Codememes.git
             cd Codememes
             
-            # stop all running containers
-            docker stop $(docker ps -aq) 
-            #remove all containers
-            docker rm $(docker ps -aq)
-            #remove all images
-            docker rmi $(docker images -q)
-            
             #build container
             docker build -t ttruty/codememes-image:latest . --no-cache
+            
+            # stop all running containers
+            docker stop $(docker ps -aq) 
+            
             # run container
             docker run -d -p 3000:9091 ttruty/codememes-image
 
