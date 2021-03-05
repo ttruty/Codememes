@@ -76,12 +76,14 @@ export const Lobby = ({ defaultGameID }) => {
       <div id="available-games">
         <form id="new-game">
           <p className="intro">
-            Play Codememes online across multiple devices on a shared board with images and gifs. To
-            create a new game or join an existing game, enter a game identifier choose a rating,
-            and click 'GO'. 
+            Play <b>Codememes</b> online across multiple devices on a shared
+            board with images and gifs. To create a new game or join an existing
+            game, enter a game identifier choose a rating, and click 'GO'.
           </p>
           <p>
-          <a href="https://timtruty.com/game/2020/04/01/play-codememes/">Basic Tutorial How to Play</a>
+            <a href="https://timtruty.com/game/2020/04/01/play-codememes/">
+              Basic Tutorial How to Play
+            </a>
           </p>
           <input
             type="text"
